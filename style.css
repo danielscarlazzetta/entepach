@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -12,8 +16,7 @@ h1 {
 }
 
 h2 {
-    font-size: 2.7em;
-
+    font-size: 3em;
 }
 
 h3 {
@@ -45,6 +48,10 @@ button {
 
 button:hover {
     background-color: black;
+}
+
+.color-acento {
+    color: brown;
 }
 
 .container {
@@ -95,22 +102,207 @@ header a:hover {
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    height: 90vh;
+    height: 100vh;
     color: white;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("media/img2.png");      
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("media/img2.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 }
 
-#somos_pro{
-
+#historia {
+    background-color: rgba(127, 255, 212, 0.184);
+    height: 100vh;
 }
 
-#somos_pro .container{
+#historia .container {
+    text-align: center;
+    padding: 200px 12px;
+}
+
+#noticias {
+    background-color: rgb(30, 30, 30);
+    color: whitesmoke;
+    text-align: center;
+    padding: 80px;
+}
+
+#noticias .container {
+    padding: 100px 12px;
+}
+
+#noticias h2 {
+    margin-top: 0;
+}
+
+#noticias p {
+    display: none;
+}
+
+#noticias .carta {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 46px;
+    margin: 22px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.carta:first-child {
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0, 0, 0, 0.8)), url("media/img3.png");
+}
+
+.carta:nth-child(2) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("media/img4.png");
+}
+
+.carta:nth-child(3) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("media/img5.png");
+}
+
+#caracteristicas h2{
+    margin-top: 40px;
     text-align: center;
 }
 
-/*min 40
-url video https://www.youtube.com/watch?v=8-RC-Q7Wtzc
-*/
+#caracteristicas .container {
+    text-align: center;
+    padding: 200px 12px;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#caracteristicas li {
+    margin: 12px 0px;
+    font-weight: bold;
+    display: flex;
+}
+
+#final h2 {
+    font-size: 7vw;
+}
+
+#final {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-color: blueviolet;
+    color: white;
+}
+
+#final button {
+    font-size: 3vw;
+}
+
+footer {
+    background-color: rgb(230, 230, 230);
+    height: 10vh;
+}
+
+footer p {
+    margin: 0;
+    color: rgb(101, 99, 99);
+    padding: 18px;
+}
+
+footer .container {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+
+@media(min-width:720px) {
+    header {
+        position: fixed;
+        width: 100%;
+    }
+
+    header .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav {
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+    #inicio h1{
+        font-size: 6em;
+    }
+
+    #historia .container {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #historia .img-container {
+        margin-top: 90px;
+        background-image: url("media/entepach1.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        height: 400px;
+        width: 400px;
+    }
+
+    #historia h2{
+        margin-top: 0px;
+    }
+
+    #historia .texto{
+        margin-top: 80px;
+        width: 90%;
+        max-width: 700px;
+        text-align: initial;
+        padding-left: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #noticias{
+        height: 100vh;
+    }
+    #noticias .programas{
+        display: flex;
+        justify-content: center;
+    }
+    #noticias p{
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #noticias h3{
+        margin-top: 0;
+    }
+
+    #noticias .carta{
+        padding: 15px;
+    }
+
+    #caracteristicas .container{
+        text-align: initial;
+    }
+
+    #caracteristicas ul{
+        margin-left: 100px;
+    }
+
+    #final h2{
+        font-size: 5em;
+    }
+
+    #final button{
+        font-size: 2em;
+    }
+}
