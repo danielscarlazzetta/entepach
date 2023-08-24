@@ -68,8 +68,8 @@
 }
 
 .icon_peque {
-    width: 22px;
-    filter: grayscale(100%);
+    width: 30px;
+    filter: invert(100%);
 }
 
 #btn_social {
@@ -260,11 +260,11 @@ header a:hover {
     display: flex;
 }
 
-#final h2 {
+#contacto h2 {
     font-size: 7vw;
 }
 
-#final {
+#contacto {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -275,7 +275,7 @@ header a:hover {
     color: white;
 }
 
-#final button {
+#contacto button {
     font-size: 3vw;
 }
 
@@ -378,11 +378,11 @@ footer .container {
         margin-left: 100px;
     }
 
-    #final h2{
+    #contacto h2{
         font-size: 5em;
     }
 
-    #final button{
+    #contacto button{
         font-size: 2em;
     }
 }
