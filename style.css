@@ -2,6 +2,80 @@
     box-sizing: border-box;
 }
 
+.container_bar{
+    width: 100%;
+    max-width: 55px;
+    position: fixed;
+    left: 0;
+    top: 25%;
+}
+.container_bar a{
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 17px;
+    position: relative;
+    transition: all 500ms ease;
+    color: #fff;
+}
+
+.container_bar a:hover{
+    background: #1c1c1c;
+}
+
+.container_bar .icon_face{
+    background: #3b5998;
+    border-radius: 0px 5px 0px 0px;
+}
+.container_bar .icon_insta{
+    background: #751775;
+}
+.container_bar .icon_x{
+    background: #000;
+}
+.container_bar .icon_you{
+    background: #e52a23;
+    border-radius: 0px 0px 5px 0px;
+}
+.container_bar #titulo_icono{
+    position: fixed;
+    background: #1c1c1c;
+    padding: 6px;
+    border-radius: 3px;
+    font-size: 15px;
+    margin-top: -4px;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+.container_bar a:hover #titulo_icono{
+    opacity: 1;
+    visibility: visible;
+    margin-left: 30px;
+}
+
+.container_bar #titulo_icono:after{
+    position: absolute;
+    content: '';
+    border-top: 7px solid transparent;
+    border-left: 6px solid transparent;
+    border-right: 7px solid #1c1c1c;
+    border-bottom: 7px solid transparent;
+    right: 100%;
+    top: 8px;
+}
+
+.icon_peque {
+    width: 22px;
+    filter: grayscale(100%);
+}
+
+#btn_social {
+    display: none;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -60,7 +134,7 @@ button:hover {
 }
 
 header {
-    background-color: rgb(184, 173, 158);
+    background-color: rgba(9, 9, 9, 0.5);
 }
 
 header .logo {
@@ -88,12 +162,14 @@ header a {
     padding: 5px 12px;
     text-decoration: none;
     font-weight: bold;
-    color: rgb(101, 99, 99);
+    color: rgb(255, 255, 255);
 }
 
 header a:hover {
     text-decoration: none;
-    color: rgb(162, 15, 15);
+    color: rgb(191, 191, 191);
+    box-shadow: 2px 2px 10px 2px;
+    border-radius: 7px;
 }
 
 #inicio {
@@ -111,8 +187,12 @@ header a:hover {
 }
 
 #historia {
-    background-color: rgba(127, 255, 212, 0.184);
+    background-color: rgba(197, 227, 217, 0.184);
     height: 100vh;
+}
+
+#historia h2{
+    color: rgb(58, 59, 60);
 }
 
 #historia .container {
@@ -161,12 +241,12 @@ header a:hover {
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("media/img5.png");
 }
 
-#caracteristicas h2{
+#temachi h2{
     margin-top: 40px;
     text-align: center;
 }
 
-#caracteristicas .container {
+#temachi .container {
     text-align: center;
     padding: 200px 12px;
     align-items: center;
@@ -174,7 +254,7 @@ header a:hover {
     height: 100vh;
 }
 
-#caracteristicas li {
+#temachi li {
     margin: 12px 0px;
     font-weight: bold;
     display: flex;
@@ -290,11 +370,11 @@ footer .container {
         padding: 15px;
     }
 
-    #caracteristicas .container{
+    #temachi .container{
         text-align: initial;
     }
 
-    #caracteristicas ul{
+    #temachi ul{
         margin-left: 100px;
     }
 
